@@ -5,12 +5,12 @@ import { Category } from './types/categoriesType';
 import { items } from './data/items';
 import { categories } from './data/categories';
 import { filterListByMonth, getCurrentMonth } from './utils/dateFilter';
-
+import TableArea from './components/tableArea';
 
 
 const App = () => {
   const [list, setList] = useState(items);//Geral list 
-  const [filtered, setFilteredList] = useState<Item[]>([]);
+  const [filteredList, setFilteredList] = useState<Item[]>(list);
   const [currentMonth, setCurrentMonth] = useState(getCurrentMonth());
 
   useEffect(() => {
@@ -29,7 +29,7 @@ const App = () => {
 
       </C.Header>
       <C.Body>
-          ...
+          <TableArea list={filteredList}/>
       </C.Body>
     </C.Container>
   );
