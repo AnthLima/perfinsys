@@ -5,7 +5,7 @@ import { Category } from './types/categoriesType';
 import { items } from './data/items';
 import { categories } from './data/categories';
 import { filterListByMonth, getCurrentMonth } from './utils/dateFilter';
-import TableArea from './components/tableArea';
+import { TableArea } from './components/tableArea';
 
 
 const App = () => {

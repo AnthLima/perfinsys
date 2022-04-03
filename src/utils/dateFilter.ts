@@ -19,3 +19,22 @@ export const filterListByMonth = (list: Item[], date: string): Item[] => {
     }
     return newList;// new list of items of same year and month
 }
+
+export const formatDateBR = (date: Date): string => {
+    let year = date.getFullYear();
+    let month = date.getMonth()+1;
+    let day = date.getDate();
+
+    return `${addZeroToDate(day)}/${addZeroToDate(month)}/${year}`;
+}
+
+export const formatDateUSA = (date: Date): string => {
+    let year = date.getFullYear();
+    let month = date.getMonth()+1;
+    let day = date.getDate();
+
+    return `${addZeroToDate(month)}/${addZeroToDate(day)}/${year}`;
+}
+
+const addZeroToDate = (n:number): string => n < 10 ? `0${n}` : `${n}`;
+ 

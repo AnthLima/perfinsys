@@ -20,13 +20,13 @@ export const items: Item[] = [
         value: 46.78
     },
     {
-        date: new Date(2022, 10, 30),
+        date: new Date(2022, 3, 30),
         category: 'rent',
         title: 'mansion',
         value: 10000000.00
     },
     {
-        date: new Date(2022, 10, 30),
+        date: new Date(2022, 3, 30),
         category: 'salary',
         title: 'FloatCode.inc',
         value: 120000
